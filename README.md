@@ -2,6 +2,8 @@
 
 Store [PhpAb](https://github.com/phpab/phpab) tests participations in MongoDB.
 
+Note: This is compatible with MongoDB and not with the legacy Mongo library.
+
 ## Install
 
 Via Composer
@@ -12,7 +14,7 @@ $ composer require phpab/analytics-mongodb
 
 ## Usage
 
-This is a full usage.
+Usage after full PhpAB example.
 
 ``` php
 <?php
@@ -50,7 +52,6 @@ $engine->addTest($test);
 $engine->start();
 
 // Here starts MongoDB interaction
-
 // Provide a MongoDB Collection to be injected
 $mongoCollection = (new \MongoDB\Client)->phpab->run;
 
@@ -66,8 +67,6 @@ $result = $analytics->store('1.2.3.4-abc', 'homepage.php');
 
 // $result is the amount of documents inserted
 ```
-
-
 
 ## Change log
 
