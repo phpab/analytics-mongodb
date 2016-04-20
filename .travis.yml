@@ -1,6 +1,8 @@
 language: php
 
 php:
+  - 5.5
+  - 5.6
   - 7.0
 
 # This triggers builds to run on the new TravisCI infrastructure.
@@ -9,7 +11,7 @@ sudo: false
 
 before_install:
   - travis_retry composer self-update
-  - phpenv config-add myconfig.ini
+  - pecl install <extension>
 
 install:
   - travis_retry composer install --no-interaction --ignore-platform-reqs
