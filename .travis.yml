@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - 7.0
+
+# This triggers builds to run on the new TravisCI infrastructure.
+# See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
+sudo: false
+
+before_install:
+  - travis_retry composer self-update
+  - phpenv config-add myconfig.ini
+
+install:
+  - travis_retry composer install --no-interaction --ignore-platform-reqs
+
+script:
+  - composer validate --strict
+  - vendor/bin/phpcs --standard=psr2 src/
+  - vendor/bin/phpunit
