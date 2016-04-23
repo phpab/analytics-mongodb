@@ -1,9 +1,17 @@
 <?php
+/**
+ * This file is part of phpab/analytics-mongodb. (https://github.com/phpab/analytics-mongodb)
+ *
+ * @link https://github.com/phpab/analytics-mongodb for the canonical source repository
+ * @copyright Copyright (c) 2015-2016 phpab. (https://github.com/phpab/)
+ * @license https://github.com/phpab/analytics-mongodb/blob/master/LICENSE MIT
+ */
 
 namespace PhpAb\Analytics;
 
 class MongoDBTest extends \PHPUnit_Framework_TestCase
 {
+
     private $mockedMongoCollection;
     private $mockedBulkWriteResult;
 
@@ -12,17 +20,17 @@ class MongoDBTest extends \PHPUnit_Framework_TestCase
         parent::setUp();
 
         $this->mockedBulkWriteResult = $this->getMockBuilder('\MongoDB\BulkWriteResult')
-                ->disableOriginalConstructor()
-                ->getMock();
+            ->disableOriginalConstructor()
+            ->getMock();
         $this->mockedBulkWriteResult->method('getInsertedCount')
-                ->willReturn(2);
+            ->willReturn(2);
 
         $this->mockedMongoCollection = $this->getMockBuilder('\MongoDB\Collection')
-                ->disableOriginalConstructor()
-                ->getMock();
+            ->disableOriginalConstructor()
+            ->getMock();
 
         $this->mockedMongoCollection->method('bulkWrite')
-                ->willReturn($this->mockedBulkWriteResult);
+            ->willReturn($this->mockedBulkWriteResult);
     }
 
     public function testStore()

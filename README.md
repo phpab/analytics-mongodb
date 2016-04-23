@@ -84,7 +84,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details
 
 ## Security
 
-If you discover any security related issues, please open an issue in the issue tracker. We realize 
+If you discover any security related issues, please open an issue in the issue tracker. We realize
 this is not ideal but it's the fastest way to get the issue solved.
 
 ## Credits
@@ -97,20 +97,3 @@ this is not ideal but it's the fastest way to get the issue solved.
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/phpab/phpab.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/phpab/phpab/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/phpab/phpab.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/phpab/phpab.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/phpab/phpab.svg?style=flat-square
-[ico-versioneye]: https://img.shields.io/versioneye/d/phpab/phpab.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/phpab/phpab
-[link-travis]: https://travis-ci.org/phpab/phpab
-[link-scrutinizer]: https://scrutinizer-ci.com/g/phpab/phpab/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/phpab/phpab
-[link-downloads]: https://packagist.org/packages/phpab/phpab
-[link-versioneye]: https://www.versioneye.com/user/projects/5702c846fcd19a004543f8fb
-[link-author]: https://github.com/:author_username
-[link-contributors]: ../../contributors

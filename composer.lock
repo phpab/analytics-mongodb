@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "69d563f4030d545acb01c32a2cff9b9b",
-    "content-hash": "6f4bfa4a800e43b5955814be201f78f1",
+    "hash": "56bf0ef8e7d75adade4e0977bc19704f",
+    "content-hash": "c638bd5c47f7e4538f90bd5cb8516e70",
     "packages": [
         {
             "name": "mongodb/mongodb",
@@ -64,16 +64,16 @@
         },
         {
             "name": "phpab/phpab",
-            "version": "dev-feature/DBDataCollector",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpab/phpab.git",
-                "reference": "92b0df6893692b2f570011480afff03e5b04e2b7"
+                "reference": "ecaab36f97d05ec124e215cb92f774494b1fde35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpab/phpab/zipball/92b0df6893692b2f570011480afff03e5b04e2b7",
-                "reference": "92b0df6893692b2f570011480afff03e5b04e2b7",
+                "url": "https://api.github.com/repos/phpab/phpab/zipball/ecaab36f97d05ec124e215cb92f774494b1fde35",
+                "reference": "ecaab36f97d05ec124e215cb92f774494b1fde35",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +128,7 @@
                 "ab test",
                 "abtest"
             ],
-            "time": "2016-04-20 19:21:08"
+            "time": "2016-04-22 18:58:46"
         },
         {
             "name": "webmozart/assert",
@@ -1213,14 +1213,7 @@
             "time": "2016-03-04 07:55:57"
         }
     ],
-    "aliases": [
-        {
-            "alias": "dev-master",
-            "alias_normalized": "9999999-dev",
-            "version": "dev-feature/DBDataCollector",
-            "package": "phpab/phpab"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "phpab/phpab": 20
