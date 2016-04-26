@@ -68,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpab/phpab.git",
-                "reference": "ecaab36f97d05ec124e215cb92f774494b1fde35"
+                "reference": "bef2d086cb2a359979bb11a6600d206e960b0a0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpab/phpab/zipball/ecaab36f97d05ec124e215cb92f774494b1fde35",
-                "reference": "ecaab36f97d05ec124e215cb92f774494b1fde35",
+                "url": "https://api.github.com/repos/phpab/phpab/zipball/bef2d086cb2a359979bb11a6600d206e960b0a0a",
+                "reference": "bef2d086cb2a359979bb11a6600d206e960b0a0a",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +128,7 @@
                 "ab test",
                 "abtest"
             ],
-            "time": "2016-04-22 18:58:46"
+            "time": "2016-04-26 22:03:16"
         },
         {
             "name": "webmozart/assert",
