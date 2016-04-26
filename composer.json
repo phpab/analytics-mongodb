@@ -1,0 +1,57 @@
+{
+    "name": "phpab/analytics-mongodb",
+    "type": "library",
+    "description": "Store PhpAB tests participations in MongoDB",
+    "keywords": [
+        "phpab",
+        "analytics-mongodb",
+        "analytics",
+        "mongodb"
+    ],
+    "homepage": "https://github.com/phpab/analytics-mongodb",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Walter Tamboer",
+            "email": "walter@tamboer.nl",
+            "homepage": "https://github.com/waltertamboer",
+            "role": "Developer"
+        },
+        {
+            "name": "Patrick Heller",
+            "email": "paddy.heller@gmail.com",
+            "homepage": "https://github.com/psren",
+            "role": "Developer"
+        },
+        {
+            "name": "Mariano F.co Benítez Mulet",
+            "email": "nanodevel@gmail.com",
+            "homepage": "https://github.com/pachico",
+            "role": "Developer"
+        }
+
+    ],
+    "require": {
+        "php": "~5.5|~7.0",
+        "ext-mongodb": "1.1.*",
+        "mongodb/mongodb": "^1.0.0",
+        "phpab/phpab": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "squizlabs/php_codesniffer": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpAb\\Analytics\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpAb\\Analytics\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
