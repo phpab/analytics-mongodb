@@ -17,6 +17,6 @@ install:
   - travis_retry composer install --no-interaction --ignore-platform-reqs
 
 script:
-  - composer validate --strict
+  - composer validate --no-check-all
   - vendor/bin/phpcs --standard=psr2 src/
   - vendor/bin/phpunit
