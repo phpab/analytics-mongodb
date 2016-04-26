@@ -29,7 +29,7 @@ class MongoDB
     /**
      * Initializes a new instance of this class.
      *
-     * @param array $participations An array containing tests chosen variations
+     * @param array $participations An array containing tests chosen variants
      * @param \MongoDB\Collection $collection MongoDB Collection where participation will be stored
      */
     public function __construct(array $participations, \MongoDB\Collection $collection)
@@ -56,10 +56,10 @@ class MongoDB
 
         $uniqueRunIdentifier = uniqid('', true);
 
-        foreach ($this->participations as $testIdentifier => $variationIdentifier) {
+        foreach ($this->participations as $testIdentifier => $variantIdentifier) {
             $document = [
                 'testIdentifier' => $testIdentifier,
-                'variationIdentifier' => $variationIdentifier,
+                'variantIdentifier' => $variantIdentifier,
                 'userIdentifier' => $userIdentifier,
                 'scenarioIdentifier' => $scenarioIdentifier,
                 'runIdentifier' => $uniqueRunIdentifier,
