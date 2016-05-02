@@ -8,7 +8,7 @@ Note: This is compatible with MongoDB and not with the legacy Mongo library.
 
 Via Composer
 
-``` bash
+```bash
 $ composer require phpab/analytics-mongodb
 ```
 
@@ -16,33 +16,41 @@ $ composer require phpab/analytics-mongodb
 
 Usage after full PhpAB example.
 
-``` php
-<?php
+```php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+use PhpAb\Storage\Cookie;
+use PhpAb\Participation\Manager;
+use PhpAb\Analytics\DataCollector\Generic;
+use PhpAb\Event\Dispatcher;
+use PhpAb\Participation\Filter\Percentage;
+use PhpAb\Variant\Chooser\RandomChooser;
+use PhpAb\Variant\SimpleVariant;
+use PhpAb\Variant\CallbackVariant;
+use PhpAb\Engine\Engine;
+use PhpAb\Test\Test;
 
-$storage = new \PhpAb\Storage\Cookie('phpab');
-$manager = new \PhpAb\Participation\Manager($storage);
+$storage = new Cookie('phpab');
+$manager = new Manager($storage);
 
-$analyticsData = new \PhpAb\Analytics\DB\DataCollector;
+$analyticsData = new Generic();
 
-$dispatcher = new \PhpAb\Event\Dispatcher();
+$dispatcher = new Dispatcher();
 $dispatcher->addSubscriber($analyticsData);
 
-$filter = new \PhpAb\Participation\PercentageFilter(50);
-$chooser = new \PhpAb\Variant\RandomChooser();
+$filter = new Percentage(50);
+$chooser = new RandomChooser();
 
-$engine = new PhpAb\Engine\Engine($manager, $dispatcher, $filter, $chooser);
+$engine = new Engine($manager, $dispatcher, $filter, $chooser);
 
-$test = new \PhpAb\Test\Test('foo_test');
-$test->addVariant(new \PhpAb\Variant\SimpleVariant('_control'));
-$test->addVariant(new \PhpAb\Variant\CallbackVariant('v1', function () {
+$test = new Test('foo_test');
+$test->addVariant(new SimpleVariant('_control'));
+$test->addVariant(new CallbackVariant('v1', function () {
     echo 'v1';
 }));
-$test->addVariant(new \PhpAb\Variant\CallbackVariant('v2', function () {
+$test->addVariant(new CallbackVariant('v2', function () {
     echo 'v2';
 }));
-$test->addVariant(new \PhpAb\Variant\CallbackVariant('v3', function () {
+$test->addVariant(new CallbackVariant('v3', function () {
     echo 'v3';
 }));
 
@@ -52,6 +60,7 @@ $engine->addTest($test);
 $engine->start();
 
 // Here starts MongoDB interaction
+
 // Provide a MongoDB Collection to be injected
 $mongoCollection = (new \MongoDB\Client)->phpab->run;
 
@@ -65,7 +74,7 @@ $analytics = new \PhpAb\Analytics\MongoDB(
 
 $result = $analytics->store('1.2.3.4-abc', 'homepage.php');
 
-// $result is the amount of documents inserted
+var_dump($result);
 ```
 
 ## Change log
@@ -89,10 +98,8 @@ this is not ideal but it's the fastest way to get the issue solved.
 
 ## Credits
 
-- [Walter Tamboer](https://github.com/waltertamboer)
-- [Patrick Heller](https://github.com/psren)
 - [Mariano F.co Benítez Mulet](https://github.com/pachico)
-- [All Contributors](https://github.com/phpab/phpab/graphs/contributors)
+- [All Contributors](https://github.com/phpab/analytics-mongodb/graphs/contributors)
 
 ## License
 
